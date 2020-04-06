@@ -111,6 +111,7 @@ The SQL DELETE Statement
 	DELETE FROM student
 	WHERE student_id = '5';
 
+![DataBase](https://user-images.githubusercontent.com/60407200/78585130-b5e8d900-780f-11ea-8d33-a79b173101dc.png)
 
 
 	
