@@ -388,4 +388,46 @@ The SQL DELETE Statement
 ![7](https://user-images.githubusercontent.com/60407200/78598943-95784900-7826-11ea-841a-5103604576b1.png)
 
 
+<h3>Algumas queries básicas com Wildcard </h3>
+<h4>Find any client's who are an LLC: </h4>
+	
+	-- % = any # characters, _ = one character
+	SELECT *
+	FROM client
+	WHERE client_name LIKE '%LLC';
+	
+<h4>Resultado: </h4>
+
+![1](https://user-images.githubusercontent.com/60407200/78600634-a37b9900-7829-11ea-9b72-da73be20be62.png)
+
+<h4>Find any branch suppliers who are in the label business: </h4>
+	
+	SELECT *
+	FROM branch_supplier
+	WHERE supplier_name LIKE '% Label%';
+	
+<h4>Resultado: </h4>
+
+![2](https://user-images.githubusercontent.com/60407200/78600635-a4142f80-7829-11ea-9382-11a6a5faab81.png)
+
+<h4>Find any employee born on the 10th day of the month: </h4>
+	
+	SELECT *
+	FROM employee
+	WHERE birth_day LIKE '_____10%';
+	
+<h4>Resultado: </h4>
+
+![3](https://user-images.githubusercontent.com/60407200/78600637-a4acc600-7829-11ea-9549-99f87b6337ca.png)
+
+<h4>Find any clients who are schools: </h4>
+	
+	SELECT *
+	FROM client
+	WHERE client_name LIKE '%Highschool%';
+	
+<h4>Resultado: </h4>
+
+![4](https://user-images.githubusercontent.com/60407200/78600639-a4acc600-7829-11ea-95fd-1cdd37f259f7.png)
+
 
