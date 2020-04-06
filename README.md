@@ -87,5 +87,31 @@ SQL INSERT INTO Statement:
 	('3', 'Claire', 'English'),
 	('4', 'Jack', 'Biology'),
 	('5', 'Mike', 'Comp. Sci');
+
+
+The SQL UPDATE Statement
+	
+	UPDATE Syntax
+	UPDATE table_name
+	SET column1 = value1, column2 = value2, ...
+	WHERE condition;
+
+	Example:
+	UPDATE student 
+	SET major = 'Bio'
+	WHERE major = 'Biology';
+
+
+The SQL DELETE Statement
+
+	DELETE Syntax:
+	DELETE FROM table_name WHERE condition; 
+
+	Example:
+	DELETE FROM student
+	WHERE student_id = '5';
+
+
+
 	
 
