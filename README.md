@@ -320,3 +320,72 @@ The SQL DELETE Statement
 
 ![8](https://user-images.githubusercontent.com/60407200/78592703-da4ab280-781b-11ea-971e-31232968c051.png)	
 
+<h3>Algumas queries básicas com funções </h3>
+<h4>Find the number of employees: </h4>
+
+	SELECT COUNT(emp_id) 
+	FROM employee;
+<h4>Resultado: </h4>
+
+![1](https://user-images.githubusercontent.com/60407200/78598944-9610df80-7826-11ea-874a-73fd9c59d107.png)
+
+<h4>Find the number of female employee born after 1970: </h4>
+
+	SELECT COUNT(emp_id) 
+	FROM employee
+	WHERE sex = 'F' and birth_day > '1970-01-01';
+	
+<h4>Resultado: </h4>
+
+![2](https://user-images.githubusercontent.com/60407200/78598932-9315ef00-7826-11ea-9aa2-e303efcd6764.png)
+
+<h4>Find the average of all employee's salaries: </h4>
+
+	SELECT AVG(salary) 
+	FROM employee;
+	
+<h4>Resultado: </h4>
+
+![3](https://user-images.githubusercontent.com/60407200/78598933-93ae8580-7826-11ea-9fc1-9e386a491c24.png)
+
+<h4>Find the average of male employee's salaries: </h4>
+
+	SELECT AVG(salary) 
+	FROM employee
+	WHERE sex = 'M';
+	
+<h4>Resultado: </h4>
+
+![4](https://user-images.githubusercontent.com/60407200/78598935-94471c00-7826-11ea-8324-b2c2bea9b24c.png)
+
+<h4>Find the sum of all employee's salaries: </h4>
+
+	SELECT SUM(salary) 
+	FROM employee;
+	
+<h4>Resultado: </h4>
+
+![5](https://user-images.githubusercontent.com/60407200/78598937-94dfb280-7826-11ea-9913-8466d48a563f.png)
+
+<h4>Find out how many males and females there are: </h4>
+
+	SELECT COUNT(sex), sex
+	FROM employee
+	GROUP BY sex;
+	
+<h4>Resultado: </h4>
+
+![6](https://user-images.githubusercontent.com/60407200/78598940-95784900-7826-11ea-9acb-612d00e57142.png)
+
+<h4>Find the total sales of each salesman: </h4>
+
+	SELECT SUM(total_sales), emp_id
+	FROM works_with
+	GROUP BY emp_id;
+	
+<h4>Resultado: </h4>
+
+![7](https://user-images.githubusercontent.com/60407200/78598943-95784900-7826-11ea-841a-5103604576b1.png)
+
+
+
