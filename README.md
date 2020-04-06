@@ -431,3 +431,27 @@ The SQL DELETE Statement
 ![4](https://user-images.githubusercontent.com/60407200/78600639-a4acc600-7829-11ea-95fd-1cdd37f259f7.png)
 
 
+<h3>Algumas queries básicas com Union </h3>
+<h4>Find a list of employee and branch names: </h4>
+
+	SELECT employee.first_name AS Employee_Branch_Names
+	FROM employee
+	UNION
+	SELECT branch.branch_name
+	FROM branch;
+
+<h4>Resultado: </h4>
+
+![1](https://user-images.githubusercontent.com/60407200/78604080-9661a880-782f-11ea-9a94-b6a101a5d054.png)
+
+<h4>Find a list of employee and branch names: </h4>
+
+	SELECT salary
+	FROM employee
+	UNION
+	SELECT total_sales
+	FROM works_with;
+
+<h4>Resultado: </h4>
+
+![2](https://user-images.githubusercontent.com/60407200/78604089-995c9900-782f-11ea-9770-7260196382ee.png)
