@@ -110,7 +110,8 @@ The SQL DELETE Statement
 	Example:
 	DELETE FROM student
 	WHERE student_id = '5';
-
+	
+<h3>Criando Banco de Dados</h3>
 ![DataBase](https://user-images.githubusercontent.com/60407200/78585130-b5e8d900-780f-11ea-8d33-a79b173101dc.png)
 
 
