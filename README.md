@@ -248,7 +248,7 @@ The SQL DELETE Statement
 	SELECT * FROM works_with
 	
 	
-<h3>Banco de Dados Criando</h3>
+<h3>Banco de Dados Criado</h3>
 
 ![DataBaseReal](https://user-images.githubusercontent.com/60407200/78589741-0f083b00-7817-11ea-8cfd-b45becaf5abe.png)
 
