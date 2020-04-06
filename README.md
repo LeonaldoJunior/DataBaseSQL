@@ -256,28 +256,60 @@ The SQL DELETE Statement
 
 	-- Find all employees
 	SELECT * FROM employee;
+	
+<h3>Resultado: </h3>
+
+![1](https://user-images.githubusercontent.com/60407200/78592687-d74fc200-781b-11ea-97ab-4a6ea021b558.png)
 
 	-- Find all clients
 	SELECT * FROM client;
 
+<h3>Resultado: </h3>
+
+![2](https://user-images.githubusercontent.com/60407200/78592693-d7e85880-781b-11ea-89d9-c56c2f137eef.png)
+
 	-- Find all employees ordered by salary
 	SELECT * FROM employee
 	ORDER BY salary DESC;
+	
+<h3>Resultado: </h3>
+
+![3](https://user-images.githubusercontent.com/60407200/78592694-d880ef00-781b-11ea-85a0-87dfeb2c94e0.png)
 
 	-- Find all employees ordered by sex then name
 	SELECT * FROM employee
 	ORDER BY sex, first_name, last_name DESC;
+	
+<h3>Resultado: </h3>
+
+![4](https://user-images.githubusercontent.com/60407200/78592695-d880ef00-781b-11ea-8616-337922a07e25.png)
 
 	-- Find the first 5 employees in the table
 	SELECT * FROM employee
 	LIMIT 5;
+	
+<h3>Resultado: <h3>
+	
+![5](https://user-images.githubusercontent.com/60407200/78592699-d9198580-781b-11ea-8914-bf017c79c924.png)
 
 	-- Find the first and last names of all employees
 	SELECT first_name, last_name FROM employee;
+	
+<h3>Resultado: </h3>
+
+![6](https://user-images.githubusercontent.com/60407200/78592701-d9198580-781b-11ea-8982-2521fb232a5d.png)
 
 	-- Find the forename and surnames names of all employees
 	SELECT first_name AS forename, last_name AS surname FROM employee;
+	
+<h3>Resultado: </h3>
+
+![7](https://user-images.githubusercontent.com/60407200/78592702-d9b21c00-781b-11ea-9237-bd767b27362a.png)
 
 	-- Find out all the different genders
 	SELECT DISTINCT sex FROM employee;
+
+<h3>Resultado: </h3>
+
+![8](https://user-images.githubusercontent.com/60407200/78592703-da4ab280-781b-11ea-971e-31232968c051.png)	
 
