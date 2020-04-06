@@ -60,3 +60,32 @@ SQL ALTER TABLE Statement:
       ALTER TABLE student 
       DROP COLUMN gpa;
 
+SQL INSERT INTO Statement:
+
+	Syntax:
+	INSERT INTO table_name (column1, column2, column3, ...)
+	VALUES (value1, value2, value3, ...);
+
+	INSERT INTO table_name
+	VALUES (value1, value2, value3, ...);
+	
+	Example:
+	INSERT INTO student
+	(student_id, name, major)
+	VALUES 
+	('1', 'Jack', 'Biology'),
+	('2', 'Kate', 'Sociology'),
+	('3', 'Claire', 'English'),
+	('4', 'Jack', 'Biology'),
+	('5', 'Mike', 'Comp. Sci');
+	
+	Example:
+	INSERT INTO student 
+	VALUES 
+	('1', 'Jack', 'Biology'),
+	('2', 'Kate', 'Sociology'),
+	('3', 'Claire', 'English'),
+	('4', 'Jack', 'Biology'),
+	('5', 'Mike', 'Comp. Sci');
+	
+
