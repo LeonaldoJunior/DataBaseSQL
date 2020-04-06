@@ -23,7 +23,7 @@ The SQL CREATE TABLE Statement
        ....
     );
 
-  Example:
+    Example:
     CREATE TABLE student (
         student_id INT PRIMARY KEY,
         name       VARCHAR(20),
@@ -32,29 +32,31 @@ The SQL CREATE TABLE Statement
 
 The SQL DROP TABLE Statement
 
-  Syntax:
+    Syntax:
     DROP TABLE table_name;
 
-  Example:
+    Example:
     DROP TABLE student;
 
 SQL ALTER TABLE Statement:
 
   ALTER TABLE - ADD Column:
-    Syntax:
+  
+      Syntax:
       ALTER TABLE table_name
       ADD column_name datatype;
 
-    Example:
+      Example:
       ALTER TABLE student 
       ADD gpa DECIMAL;
 
   ALTER TABLE - DROP COLUMN
-    Syntax:
+  
+      Syntax:
       ALTER TABLE table_name
       DROP COLUMN column_name;
 
-    Example:
+      Example:
       ALTER TABLE student 
       DROP COLUMN gpa;
 
