@@ -501,3 +501,76 @@ The SQL DELETE Statement
 
 ![4](https://user-images.githubusercontent.com/60407200/78659534-132d6a80-78a2-11ea-9a5a-66940a4b29d7.png)
 
+<h3>Algumas queries básicas com Aninhamento </h3>
+<h4>Find names of all employees who have sold over 50,000: </h4>
+
+	SELECT employee.first_name, employee.last_name
+	FROM employee
+	WHERE employee.emp_id IN (SELECT works_with.emp_id
+				  FROM works_with
+				  WHERE works_with.total_sales > 30000);
+	
+<h4>Resultado: </h4>
+
+![1](https://user-images.githubusercontent.com/60407200/78661521-4cb3a500-78a5-11ea-9562-66c44046ffaf.png)
+
+<h4>Find all clients who are handles by the branch that Michael Scott manages. Assume you know Michael's ID: </h4>
+
+	SELECT client.client_id, client.client_name
+	FROM client
+	WHERE client.branch_id = (SELECT branch.branch_id
+				  FROM branch
+				  WHERE branch.mgr_id = 102);
+	
+<h4>Resultado: </h4>
+
+![2](https://user-images.githubusercontent.com/60407200/78661525-4d4c3b80-78a5-11ea-861d-26e9b21785a0.png)
+
+
+<h4>Find all clients who are handles by the branch that Michael Scott manages. Assume you DONT'T know Michael's ID: </h4>
+
+	 SELECT client.client_id, client.client_name
+	 FROM client
+	 WHERE client.branch_id = (SELECT branch.branch_id
+				   FROM branch
+				   WHERE branch.mgr_id = (SELECT employee.emp_id
+							  FROM employee
+							  WHERE employee.first_name = 'Michael' AND employee.last_name ='Scott'
+							  LIMIT 1));
+	
+<h4>Resultado: </h4>
+
+![3](https://user-images.githubusercontent.com/60407200/78661526-4de4d200-78a5-11ea-88fb-472395395a01.png)
+
+<h4>Find the names of employees who work with clients handled by the scranton branch: </h4>
+
+	SELECT employee.first_name, employee.last_name
+	FROM employee
+	WHERE employee.emp_id IN (
+				 SELECT works_with.emp_id
+				 FROM works_with
+				 )
+	AND employee.branch_id = 2;
+	
+<h4>Resultado: </h4>
+
+![4](https://user-images.githubusercontent.com/60407200/78661529-4e7d6880-78a5-11ea-96dd-4b5b7d194417.png)
+
+<h4>Find the names of all clients who have spent more than 100,000 dollars: </h4>
+
+	SELECT client.client_name
+	FROM client
+	WHERE client.client_id IN (
+				  SELECT client_id
+				  FROM (
+					SELECT SUM(works_with.total_sales) AS totals, client_id
+					FROM works_with
+					GROUP BY client_id) AS total_client_sales
+				  WHERE totals > 100000
+	);
+	
+<h4>Resultado: </h4>
+
+![5](https://user-images.githubusercontent.com/60407200/78661530-4e7d6880-78a5-11ea-886a-851f4cd4ee2d.png)
+
+
