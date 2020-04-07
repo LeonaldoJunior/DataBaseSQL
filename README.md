@@ -455,3 +455,49 @@ The SQL DELETE Statement
 <h4>Resultado: </h4>
 
 ![2](https://user-images.githubusercontent.com/60407200/78604089-995c9900-782f-11ea-9770-7260196382ee.png)
+
+
+<h3>Algumas queries básicas com JOIN </h3>
+<h4>Add the extra branch: </h4>
+
+	INSERT INTO branch VALUES(4, "Buffalo", NULL, NULL);
+	SELECT * FROM branch;
+	
+<h4>Resultado: </h4>
+
+![1](https://user-images.githubusercontent.com/60407200/78659531-1163a700-78a2-11ea-8da3-9853cc3f000b.png)
+
+<h4>Find all branches and the names of their managers: </h4>
+
+	SELECT employee.emp_id, employee.first_name, branch.branch_name
+	FROM employee
+	JOIN branch    
+	ON employee.emp_id = branch.mgr_id;
+	
+<h4>Resultado: </h4>
+
+![2](https://user-images.githubusercontent.com/60407200/78659532-1294d400-78a2-11ea-847f-913133a76acb.png)
+
+
+<h4>LEFT JOIN: </h4>
+
+	SELECT employee.emp_id, employee.first_name, branch.branch_name
+	FROM employee
+	LEFT JOIN branch    
+	ON employee.emp_id = branch.mgr_id;
+	
+<h4>Resultado: </h4>
+
+![3](https://user-images.githubusercontent.com/60407200/78659533-1294d400-78a2-11ea-8af3-df316247a27e.png)
+
+<h4>RIGHT JOIN: </h4>
+
+	SELECT employee.emp_id, employee.first_name, branch.branch_name
+	FROM employee
+	RIGHT JOIN branch    
+	ON employee.emp_id = branch.mgr_id;
+	
+<h4>Resultado: </h4>
+
+![4](https://user-images.githubusercontent.com/60407200/78659534-132d6a80-78a2-11ea-9a5a-66940a4b29d7.png)
+
